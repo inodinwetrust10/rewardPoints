@@ -84,6 +84,8 @@ All initial balances are created through proper ledger entries from the Treasury
 
 Base URL: `http://localhost:8080/api/v1`
 
+**Live deployment**: `https://rewardpoints-5u8b.onrender.com/api/v1`
+
 ### POST `/topup` — Wallet Top-up (Purchase)
 
 Credits a user's wallet from the Treasury (simulates a real-money purchase).
@@ -159,7 +161,7 @@ curl http://localhost:8080/api/v1/wallets/4/ledger
 
 | Component | Choice | Rationale |
 |-----------|--------|-----------|
-| **Go** | v1.22 | Excellent concurrency support, compiles to a single binary, strong standard library |
+| **Go** | v1.25 | Excellent concurrency support, compiles to a single binary, strong standard library |
 | **PostgreSQL** | v16 | Robust ACID compliance, `SELECT … FOR UPDATE` row-level locking, mature ecosystem |
 | **chi** | v5 | Lightweight HTTP router, stdlib `net/http` compatible, has useful middleware |
 | **pgx** | v5 | Native PostgreSQL driver (no cgo), connection pooling, binary protocol |
